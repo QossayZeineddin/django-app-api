@@ -7,6 +7,8 @@ from django.db import models
 from django.contrib.auth.models import (AbstractBaseUser, BaseUserManager, PermissionsMixin)
 
 
+
+
 class UserManager(BaseUserManager):
     def create_user(self, email, password=None, **extra_field):
         if not email:
@@ -26,7 +28,6 @@ class UserManager(BaseUserManager):
         user.save(using=self._db)
         return user
 
-
 class User(AbstractBaseUser, PermissionsMixin):
     """users in the project"""
     email = models.EmailField(blank=False, max_length=255, unique=True)
@@ -38,6 +39,14 @@ class User(AbstractBaseUser, PermissionsMixin):
     is_staff = models.BooleanField(default=False)
 
     objects = UserManager()
-
     USERNAME_FIELD = 'email'
+
+    # def __str__(self):
+    #     return self.email
+    #
+    # def get_users():
+    #     return User.objects.all()
+    #
+    # def user_birthday_greater_than_2016(self):
+    #     return User.objects.filter(birthday__year__gt=2016)
 

@@ -23,6 +23,7 @@ RUN python -m venv /py && \
     fi && \
     /py/bin/pip install pymysql && \
     /py/bin/pip install sqlalchemy && \
+    /py/bin/pip install drf-spectacular && \
     rm -rf /tmp && \
     apk del .tmp-build-deps && \
     adduser --disabled-password --no-create-home django-user
