@@ -23,8 +23,8 @@ class ModelTests(TestCase):
             self.assertEquals(user.email, email)
             self.assertTrue(user.check_password(password))
 
-        except:
-            self.fail('Error in creating the user')
+        except Exception as e:
+            self.fail(f'Error in creating the user: {str(e)}')
 
     def test_new_user_email_normalized(self):
         """Test email is normalized for new users."""
