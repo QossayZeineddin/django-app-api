@@ -1,5 +1,5 @@
 [flake8]
-ignore = E501, E251, E231
+ignore = E501, E251, E231,E203 ,W391
 max-line-length = 160
 exclude =
     migrations,
