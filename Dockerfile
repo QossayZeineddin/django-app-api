@@ -22,6 +22,7 @@ RUN python -m venv /py && \
         then /py/bin/pip install -r /tmp/requirements.dev.txt ; \
     fi && \
     /py/bin/pip install pymysql && \
+    /py/bin/pip install sqlalchemy && \
     rm -rf /tmp && \
     apk del .tmp-build-deps && \
     adduser --disabled-password --no-create-home django-user
