@@ -7,8 +7,6 @@ from django.db import models
 from django.contrib.auth.models import (AbstractBaseUser, BaseUserManager, PermissionsMixin)
 
 
-
-
 class UserManager(BaseUserManager):
     def create_user(self, email, password=None, **extra_field):
         if not email:
@@ -27,6 +25,7 @@ class UserManager(BaseUserManager):
         user.is_superuser = True
         user.save(using=self._db)
         return user
+
 
 class User(AbstractBaseUser, PermissionsMixin):
     """users in the project"""
@@ -49,4 +48,3 @@ class User(AbstractBaseUser, PermissionsMixin):
     #
     # def user_birthday_greater_than_2016(self):
     #     return User.objects.filter(birthday__year__gt=2016)
-

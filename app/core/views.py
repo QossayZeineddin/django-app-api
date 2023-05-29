@@ -8,5 +8,5 @@
 # # def get_all_user():
 # #     return User.get_users()ddd
 #
-# def get_all_user_bitrh_greater_than_2016():
-#     return HttpResponseRedirect(reverse('index' , args=(User.user_birthday_greater_than_2016())))
+#  def get_all_user_bitrh_greater_than_2016():
+#    return HttpResponseRedirect(reverse('index' , args=(User.user_birthday_greater_than_2016())))
