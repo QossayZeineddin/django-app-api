@@ -28,8 +28,6 @@ class UserSerializer(serializers.ModelSerializer):
         return user
 
 
-
-
 class AuthTokenSerializer(serializers.Serializer):
     """Serializer for the user auth token ."""
     # there is no specific model to connect here, so we choose Serializer
@@ -54,3 +52,4 @@ class AuthTokenSerializer(serializers.Serializer):
 
         attrs['user'] = user
         return attrs
+
