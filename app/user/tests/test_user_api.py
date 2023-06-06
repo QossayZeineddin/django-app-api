@@ -28,7 +28,7 @@ class PublicUserApiTests(TestCase):
     def test_create_user_success(self):
         """Test creating a user is successful."""
         payload = {
-            'email': 'test@example.com',
+            'email': 'tests@example.com',
             'password': 'testpass123',
             'name': 'Test Name',
         }
@@ -43,7 +43,7 @@ class PublicUserApiTests(TestCase):
     def test_user_with_email_exists_error(self):
         """Test error returned if user with email exists."""
         payload = {
-            'email': 'test@example.com',
+            'email': 'tests@example.com',
             'password': 'testpass123',
             'name': 'Test Name',
         }
@@ -55,7 +55,7 @@ class PublicUserApiTests(TestCase):
     def test_password_too_short_error(self):
         """Test an error is returned if password less than 5 chars."""
         payload = {
-            'email': 'test@example.com',
+            'email': 'tests@example.com',
             'password': 'pw',
             'name': 'Test name',
         }
@@ -71,8 +71,8 @@ class PublicUserApiTests(TestCase):
         """Test generates token for valid credentials."""
         user_details = {
             'name': 'Test Name',
-            'email': 'test@example.com',
-            'password': 'test-user-password123',
+            'email': 'tests@example.com',
+            'password': 'tests-user-password123',
         }
         create_user(**user_details)
 
@@ -87,9 +87,9 @@ class PublicUserApiTests(TestCase):
 
     def test_create_token_bad_credentials(self):
         """Test returns error if credentials invalid."""
-        create_user(email='test@example.com', password='goodpass')
+        create_user(email='tests@example.com', password='goodpass')
 
-        payload = {'email': 'test@example.com', 'password': 'badpass'}
+        payload = {'email': 'tests@example.com', 'password': 'badpass'}
         res = self.client.post(TOKEN_URL, payload)
 
         self.assertNotIn('token', res.data)
@@ -97,7 +97,7 @@ class PublicUserApiTests(TestCase):
 
     def test_create_token_email_not_found(self):
         """Test error returned if user not found for given email."""
-        payload = {'email': 'test@example.com', 'password': 'pass123'}
+        payload = {'email': 'tests@example.com', 'password': 'pass123'}
         res = self.client.post(TOKEN_URL, payload)
 
         self.assertNotIn('token', res.data)
@@ -105,7 +105,7 @@ class PublicUserApiTests(TestCase):
 
     def test_create_token_blank_password(self):
         """Test posting a blank password returns an error."""
-        payload = {'email': 'test@example.com', 'password': ''}
+        payload = {'email': 'tests@example.com', 'password': ''}
         res = self.client.post(TOKEN_URL, payload)
 
         self.assertNotIn('token', res.data)
@@ -123,26 +123,26 @@ class PrivateUserApiTest(TestCase):
 
     def setUp(self):
         self.user = create_user(
-            email='test@example.com',
+            email='tests@example.com',
             password='test123',
-            name="test name",
+            name="tests name",
         )
         self.client = APIClient()
         self.client.force_authenticate(user=self.user)
 
     def test_retrieve_profile_success(self):
-        """test retrieving profile foe logged in user"""
+        """tests retrieving profile foe logged in user"""
         res = self.client.get(ME_URL)
         self.assertEqual(res.status_code, status.HTTP_200_OK)
         self.assertEqual(res.data, {'name': self.user.name, 'email': self.user.email, 'birthday': self.user.birthday})
 
     def test_post_me_not_allowed(self):
-        """test post method mot allowed in endpoint me"""
+        """tests post method mot allowed in endpoint me"""
         res = self.client.post(ME_URL, {})
         self.assertEqual(res.status_code, status.HTTP_405_METHOD_NOT_ALLOWED)
 
     def test_update_user_profile(self):
-        """test updating user profile info -user how is authenticated"""
+        """tests updating user profile info -user how is authenticated"""
         payload = dict(name='new updated name', password='newPass')
         res = self.client.patch(ME_URL, payload)
         self.user.refresh_from_db()

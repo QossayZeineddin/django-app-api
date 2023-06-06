@@ -5,6 +5,7 @@ create the database models
 
 from django.db import models
 from django.contrib.auth.models import (AbstractBaseUser, BaseUserManager, PermissionsMixin)
+from django.conf import settings
 
 
 class UserManager(BaseUserManager):
@@ -40,11 +41,29 @@ class User(AbstractBaseUser, PermissionsMixin):
     objects = UserManager()
     USERNAME_FIELD = 'email'
 
-    # def __str__(self):
-    #     return self.email
-    #
-    # def get_users():
-    #     return User.objects.all()
-    #
-    # def user_birthday_greater_than_2016(self):
-    #     return User.objects.filter(birthday__year__gt=2016)
+    def __str__(self):
+        return self.email
+
+    @classmethod
+    def get_users(cls):
+        return User.objects.all()
+
+    @classmethod
+    def user_birthday_greater_than_2016(cls):
+        return User.objects.filter(birthday__year__gt=2016)
+
+
+class Recipe(models.Model):
+    """Recipe object."""
+    user = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        on_delete=models.CASCADE,
+    )
+    title = models.CharField(max_length=255)
+    description = models.TextField(blank=True)
+    time_minutes = models.IntegerField()
+    price = models.DecimalField(max_digits=5, decimal_places=2)
+    link = models.CharField(max_length=255, blank=True)
+
+    def __str__(self):
+        return self.title

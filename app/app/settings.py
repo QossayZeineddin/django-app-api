@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'drf_spectacular',
     'core',
     'user',
+    'recipe',
 ]
 
 MIDDLEWARE = [
@@ -78,14 +79,13 @@ WSGI_APPLICATION = 'app.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME':os.environ.get('DB_NAME'),
-        'USER' : 'root',
-        'PASSWORD' : os.environ.get('MYSQL_ROOT_PASSWORD'),
-        'HOST' : os.environ.get('DB_HOST'),
-        'PORT' : '3306'
+        'NAME': os.environ.get('DB_NAME'),
+        'USER': 'root',
+        'PASSWORD': os.environ.get('MYSQL_ROOT_PASSWORD'),
+        'HOST': os.environ.get('DB_HOST'),
+        'PORT': '3306'
     }
 }
-
 
 
 # Password validation

@@ -13,7 +13,7 @@ class AdminSiteTests(TestCase):
         """Create user and client."""
         self.client = Client()
         email = 'admin@example.com'
-        major = "test"
+        major = "tests"
         birthday = '2000-10-18'
         password = "test123"
         self.admin_user = get_user_model().objects.create_superuser(email, password=password, major=major, birthday=birthday)
