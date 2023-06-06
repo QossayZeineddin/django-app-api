@@ -30,8 +30,8 @@ services:
       - dev-db-data:/var/lib/mysql
     environment:
       - MYSQL_DATABASE=test_django
-      - MYSQL_USER=test
-      - MYSQL_PASSWORD=qq123
+     # - MYSQL_USER=test
+     # - MYSQL_PASSWORD=qq123
       - MYSQL_ROOT_PASSWORD=qq123
 volumes:
   dev-db-data:
