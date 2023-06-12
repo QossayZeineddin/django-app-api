@@ -7,13 +7,14 @@ from rest_framework import authentication, permissions
 
 from core.models import Recipe
 from . import serializers
+from user.authentication import ExpiringTokenAuthentication
 
 
 class RecipeViewSet(viewsets.ModelViewSet):
     """View for manage recipe APIs."""
     serializer_class = serializers.RecipeDetailSerializer
     queryset = Recipe.objects.all()
-    authentication_classes = [authentication.TokenAuthentication]
+    authentication_classes = [ExpiringTokenAuthentication]
     permission_classes = [permissions.IsAuthenticated]
 
     def get_queryset(self):
