@@ -177,7 +177,8 @@ FORMATTERS = (
         },
     },
 )
-
+LOG_FILE_PATH1 = os.path.join(BASE_DIR, 'logs', 'blogthedata_info.log')
+LOG_FILE_PATH2 = os.path.join(BASE_DIR, 'logs', 'blogthedata_error.log')
 LOGGERS = (
     {
         "django": {
@@ -210,7 +211,7 @@ HANDLERS = {
     },
     "info_handler": {
         "class": "logging.handlers.RotatingFileHandler",
-        "filename": "./logs/blogthedata_info.log",
+        "filename": LOG_FILE_PATH1,
         "mode": "a",
         "encoding": "utf-8",
         "formatter": "verbose",
@@ -220,7 +221,7 @@ HANDLERS = {
     },
     "error_handler": {
         "class": "logging.handlers.RotatingFileHandler",
-        "filename": "./logs/blogthedata_error.log",
+        "filename": LOG_FILE_PATH2,
         "mode": "a",
         "formatter": "verbose",
         "level": "WARNING",
