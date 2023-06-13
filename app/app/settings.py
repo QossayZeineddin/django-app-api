@@ -164,6 +164,8 @@ SPECTACULAR_SETTINGS = {
 # }
 
 
+import logging
+
 FORMATTERS = (
     {
         "verbose": {

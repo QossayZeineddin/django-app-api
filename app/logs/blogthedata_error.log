@@ -1,0 +1,51 @@
+WARNING 2023-06-12 10:41:48,319 django.request Thread-1 139955357592376 log log.py 224 django.request log_response 13 Bad Request: /api/user/token/
+WARNING 2023-06-12 10:41:48,324 django.server Thread-1 139955357592376 basehttp basehttp.py 161 django.server log_message 13 "POST /api/user/token/ HTTP/1.1" 400 7550
+WARNING 2023-06-12 10:43:59,780 django.request Thread-1 139866230876984 log log.py 224 django.request log_response 16 Bad Request: /api/user/token/
+WARNING 2023-06-12 10:43:59,790 django.server Thread-1 139866230876984 basehttp basehttp.py 161 django.server log_message 16 "POST /api/user/token/ HTTP/1.1" 400 7550
+WARNING 2023-06-12 10:44:24,283 django.request Thread-1 139866230876984 log log.py 224 django.request log_response 16 Bad Request: /api/user/token/
+WARNING 2023-06-12 10:44:24,287 django.server Thread-1 139866230876984 basehttp basehttp.py 161 django.server log_message 16 "POST /api/user/token/ HTTP/1.1" 400 7550
+WARNING 2023-06-12 11:04:42,307 django.request Thread-1 140225050893112 log log.py 224 django.request log_response 11 Bad Request: /api/user/token/
+WARNING 2023-06-12 11:04:42,311 django.server Thread-1 140225050893112 basehttp basehttp.py 161 django.server log_message 11 "POST /api/user/token/ HTTP/1.1" 400 7550
+WARNING 2023-06-12 11:07:32,413 django.request MainThread 139642852649800 log log.py 224 django.request log_response 1 Not Found: /api/recipe/recipes/9/
+WARNING 2023-06-12 11:07:32,902 django.request MainThread 139642852649800 log log.py 224 django.request log_response 1 Unauthorized: /api/recipe/recipes/
+WARNING 2023-06-12 11:07:33,078 django.request MainThread 139642852649800 log log.py 224 django.request log_response 1 Method Not Allowed: /api/user/me/
+WARNING 2023-06-12 11:07:34,045 django.request MainThread 139642852649800 log log.py 224 django.request log_response 1 Bad Request: /api/user/token/
+WARNING 2023-06-12 11:07:34,053 django.request MainThread 139642852649800 log log.py 224 django.request log_response 1 Bad Request: /api/user/token/
+WARNING 2023-06-12 11:07:34,229 django.request MainThread 139642852649800 log log.py 224 django.request log_response 1 Bad Request: /api/user/token/
+WARNING 2023-06-12 11:07:34,876 django.request MainThread 139642852649800 log log.py 224 django.request log_response 1 Bad Request: /api/user/create/
+WARNING 2023-06-12 11:07:34,883 django.request MainThread 139642852649800 log log.py 224 django.request log_response 1 Unauthorized: /api/user/me/
+WARNING 2023-06-12 11:07:35,058 django.request MainThread 139642852649800 log log.py 224 django.request log_response 1 Bad Request: /api/user/create/
+WARNING 2023-06-12 11:08:13,942 django.request MainThread 140160350014280 log log.py 224 django.request log_response 1 Not Found: /api/recipe/recipes/9/
+WARNING 2023-06-12 11:08:14,439 django.request MainThread 140160350014280 log log.py 224 django.request log_response 1 Unauthorized: /api/recipe/recipes/
+WARNING 2023-06-12 11:08:14,610 django.request MainThread 140160350014280 log log.py 224 django.request log_response 1 Method Not Allowed: /api/user/me/
+WARNING 2023-06-12 11:08:15,579 django.request MainThread 140160350014280 log log.py 224 django.request log_response 1 Bad Request: /api/user/token/
+WARNING 2023-06-12 11:08:15,586 django.request MainThread 140160350014280 log log.py 224 django.request log_response 1 Bad Request: /api/user/token/
+WARNING 2023-06-12 11:08:15,746 django.request MainThread 140160350014280 log log.py 224 django.request log_response 1 Bad Request: /api/user/token/
+WARNING 2023-06-12 11:08:16,404 django.request MainThread 140160350014280 log log.py 224 django.request log_response 1 Bad Request: /api/user/create/
+WARNING 2023-06-12 11:08:16,412 django.request MainThread 140160350014280 log log.py 224 django.request log_response 1 Unauthorized: /api/user/me/
+WARNING 2023-06-12 11:08:16,582 django.request MainThread 140160350014280 log log.py 224 django.request log_response 1 Bad Request: /api/user/create/
+WARNING 2023-06-12 11:08:51,529 django.request MainThread 139943102372680 log log.py 224 django.request log_response 1 Not Found: /api/recipe/recipes/9/
+WARNING 2023-06-12 11:08:52,038 django.request MainThread 139943102372680 log log.py 224 django.request log_response 1 Unauthorized: /api/recipe/recipes/
+WARNING 2023-06-12 11:08:52,203 django.request MainThread 139943102372680 log log.py 224 django.request log_response 1 Method Not Allowed: /api/user/me/
+WARNING 2023-06-12 11:08:53,204 django.request MainThread 139943102372680 log log.py 224 django.request log_response 1 Bad Request: /api/user/token/
+WARNING 2023-06-12 11:08:53,212 django.request MainThread 139943102372680 log log.py 224 django.request log_response 1 Bad Request: /api/user/token/
+WARNING 2023-06-12 11:08:53,376 django.request MainThread 139943102372680 log log.py 224 django.request log_response 1 Bad Request: /api/user/token/
+WARNING 2023-06-12 11:08:54,046 django.request MainThread 139943102372680 log log.py 224 django.request log_response 1 Bad Request: /api/user/create/
+WARNING 2023-06-12 11:08:54,053 django.request MainThread 139943102372680 log log.py 224 django.request log_response 1 Unauthorized: /api/user/me/
+WARNING 2023-06-12 11:08:54,216 django.request MainThread 139943102372680 log log.py 224 django.request log_response 1 Bad Request: /api/user/create/
+WARNING 2023-06-13 07:42:21,638 django.request Thread-1 140699137948472 log log.py 224 django.request log_response 9 Bad Request: /api/user/token/
+WARNING 2023-06-13 07:42:21,642 django.server Thread-1 140699137948472 basehttp basehttp.py 161 django.server log_message 9 "POST /api/user/token/ HTTP/1.1" 400 7500
+WARNING 2023-06-13 07:42:21,911 django.request Thread-5 140699132152632 log log.py 224 django.request log_response 9 Not Found: /favicon.ico
+WARNING 2023-06-13 07:42:21,925 django.server Thread-5 140699132152632 basehttp basehttp.py 161 django.server log_message 9 "GET /favicon.ico HTTP/1.1" 404 2583
+WARNING 2023-06-13 07:43:04,745 django.request Thread-1 140699137948472 log log.py 224 django.request log_response 9 Bad Request: /api/user/token/
+WARNING 2023-06-13 07:43:04,749 django.server Thread-1 140699137948472 basehttp basehttp.py 161 django.server log_message 9 "POST /api/user/token/ HTTP/1.1" 400 7497
+WARNING 2023-06-13 07:43:39,554 django.request Thread-1 140699137948472 log log.py 224 django.request log_response 9 Unauthorized: /api/recipe/recipes/
+WARNING 2023-06-13 07:43:39,560 django.server Thread-1 140699137948472 basehttp basehttp.py 161 django.server log_message 9 "GET /api/recipe/recipes/ HTTP/1.1" 401 58
+WARNING 2023-06-13 07:43:48,546 django.request Thread-1 140699137948472 log log.py 224 django.request log_response 9 Unauthorized: /api/recipe/recipes/
+WARNING 2023-06-13 07:43:48,550 django.server Thread-1 140699137948472 basehttp basehttp.py 161 django.server log_message 9 "GET /api/recipe/recipes/ HTTP/1.1" 401 58
+WARNING 2023-06-13 07:44:04,526 django.request Thread-1 140699137948472 log log.py 224 django.request log_response 9 Unauthorized: /api/recipe/recipes/
+WARNING 2023-06-13 07:44:04,531 django.server Thread-1 140699137948472 basehttp basehttp.py 161 django.server log_message 9 "GET /api/recipe/recipes/ HTTP/1.1" 401 30
+WARNING 2023-06-13 07:44:06,891 django.request Thread-1 140699137948472 log log.py 224 django.request log_response 9 Unauthorized: /api/recipe/recipes/
+WARNING 2023-06-13 07:44:06,896 django.server Thread-1 140699137948472 basehttp basehttp.py 161 django.server log_message 9 "GET /api/recipe/recipes/ HTTP/1.1" 401 30
+WARNING 2023-06-13 07:45:04,828 django.request Thread-1 140699137948472 log log.py 224 django.request log_response 9 Not Found: /api/recipe/recipes/1/
+WARNING 2023-06-13 07:45:04,832 django.server Thread-1 140699137948472 basehttp basehttp.py 161 django.server log_message 9 "GET /api/recipe/recipes/1/ HTTP/1.1" 404 23
